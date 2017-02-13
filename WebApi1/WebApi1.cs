@@ -23,7 +23,7 @@ namespace WebApi1
         /// </summary>
         /// <returns>The collection of listeners.</returns>
         protected override IEnumerable<ServiceInstanceListener> CreateServiceInstanceListeners()
-        {
+        { 
             return new ServiceInstanceListener[]
             {
                 new ServiceInstanceListener(serviceContext => new OwinCommunicationListener(Startup.ConfigureApp, serviceContext, ServiceEventSource.Current, "ServiceEndpoint"))
